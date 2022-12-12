@@ -7,6 +7,8 @@ let calculator_input_Number_Previews_V = document.getElementById(
 
 let Calculator_input_AC_V = document.getElementById("Calculator_input_AC");
 
+let backspace_V = document.getElementById("backspace");
+
 let DisplayValue;
 
 //This function is for Displaying Click Events
@@ -26,3 +28,10 @@ function displaySolve() {
   let y = eval(eq);
   calculator_input_Number_V.value = y;
 }
+
+backspace.addEventListener("click", () => {
+  calculator_input_Number_V.value = calculator_input_Number_V.value.slice(
+    0,
+    -1
+  );
+});
